@@ -1,0 +1,106 @@
+# VARIABLES
+# uf
+uf = 26515.51
+
+# Deuda hipotecaria vigente
+saldoHip1 = 4255
+saldoHip2 = 2791
+deudaHip = saldoHip1 + saldoHip2
+
+divHip1 = 30.055
+divHip2 = 18.895
+divActual = divHip1 + divHip2
+
+# Casa actual
+ventaCasa = 14000
+
+gastoCom = 45000
+gastoCom = gastoCom / uf
+gastoCom = int(gastoCom)
+
+contrib = (267000 * 4) / 12
+contrib = contrib / uf
+
+# Pie
+pie = 14000 - deudaHip
+
+# Simulaciones dividendos BChile depto\25anos\sinGracia\tasaFija 4,58%
+div17000 = 59.993
+div19000 = 71.686
+
+# Simulaciones dividendos BChile casas\25anos\sinGracia\tasaFija 4,58%
+div19000casa = 70.541
+div19900casa = 75.748
+
+# Gastos Comunes\Contribcuones deptos
+gastoCom1 = 400000
+gastoCom1 = gastoCom1 / uf
+gastoCom1 = int(gastoCom1)
+
+gastoCom2 = 230000
+gastoCom2 = gastoCom2 / uf
+gastoCom2 = int(gastoCom2)
+
+gastoCom3casa = 80000
+gastoCom3casa = gastoCom3casa / uf
+gastoCom3casa = int(gastoCom3casa)
+
+contrib1 = (450000 * 4) / 12
+contrib1 = contrib1 / uf
+contrib1 = int(contrib1)
+
+contrib2casa = (267000 * 4) / 12
+contrib2casa = contrib2casa / uf
+contrib2casa = int(contrib2casa)
+
+
+# CALCULOS
+# Costo mensual casa actual
+costoMensual = divActual + gastoCom + contrib
+print("CASA ACTUAL")
+print("Dividendo actual: ", "UF", divActual, "/", "$", int(divActual * uf))
+print("Gasto comun actual: ", "UF", gastoCom, "/","$", int(gastoCom * uf))
+print("Contribuciones mensuales: ", "UF", contrib, "/", "$", int(contrib * uf))
+print("Total mensual: ", "UF", costoMensual, "/", "$", int(costoMensual * uf))
+print()
+
+# Depto Carolina Rabat UF 17000
+costoMensual1 = div17000 + gastoCom1 + contrib1
+print("DEPTO CAROLINA RABAT UF 17000")
+print("Dividendo: ", "UF", div17000, "$", int(div17000 * uf))
+print("Gasto comun: ", "UF", gastoCom1, "$", int(gastoCom1 * uf))
+print("Contribuciones mensuales: ", "UF", contrib1, "$", int(contrib1 * uf))
+print("Total mensual: ", "UF", costoMensual1, "$", int(costoMensual1 * uf))
+print()
+
+# Diferencia Costo mensual depto CR UF 17000 \ Costo mensual casa actual
+dif1 = costoMensual1 - costoMensual
+print("Diferencia ", "UF", dif1, "$", int(dif1 * uf))
+print()
+print()
+
+# Casa Walter Muller UF 19000
+costoMensual2 = div19000casa + gastoCom3casa + contrib2casa
+print("Casa Walter Muller UF 19000")
+print("Dividendo: ", "UF", div19000casa, "$", int(div19000casa * uf))
+print("Gasto comun: ", "UF", gastoCom3casa, "$", int(gastoCom3casa * uf))
+print("Contribuciones mensuales: ", "UF", contrib2casa, "$", int(contrib2casa * uf))
+print("Total mensual: ", "UF", costoMensual2, "$", int(costoMensual2 * uf))
+print()
+
+# Diferencia Costo mensual depto CR UF 17000 \ Costo mensual casa actual
+dif2 = costoMensual2 - costoMensual
+print("Diferencia ", "UF", dif2, "$", int(dif2 * uf))
+
+# Casa Walter Muller UF 19900
+costoMensual3 = div19900casa + gastoCom3casa + contrib2casa
+print("Casa Walter Muller UF 19900")
+print("Dividendo: ", "UF", div19900casa, "$", int(div19900casa * uf))
+print("Gasto comun: ", "UF", gastoCom3casa, "$", int(gastoCom3casa * uf))
+print("Contribuciones mensuales: ", "UF", contrib2casa, "$", int(contrib2casa * uf))
+print("Total mensual: ", "UF", costoMensual3, "$", int(costoMensual3 * uf))
+print()
+
+# Diferencia Costo mensual depto CR UF 19900 \ Costo mensual casa actual
+dif3 = costoMensual3 - costoMensual
+print("Diferencia ", "UF", dif3, "$", int(dif3 * uf))
